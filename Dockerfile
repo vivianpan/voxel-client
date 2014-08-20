@@ -1,9 +1,9 @@
 FROM google/nodejs
 
 WORKDIR /app
-ONBUILD ADD package.json /app/
-ONBUILD RUN npm install
-ONBUILD ADD . /app
+ADD package.json /app/
+RUN npm install
+ADD . /app
 
 EXPOSE 9966
 CMD []
